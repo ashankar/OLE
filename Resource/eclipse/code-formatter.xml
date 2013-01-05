@@ -5,8 +5,8 @@ Developed By: Anand Shankar,
 Ansy India Pvt. Ltd., Mughalsarai, Chandauli, Uttar Pradesh, India. 
 Date: 05-Jan-2013 
 -->
-<profiles version="1.1">
-<profile kind="CodeFormatterProfile" name="Anand Shankar" version="1.1">
+<profiles version="11">
+<profile kind="CodeFormatterProfile" name="Anand Shankar" version="11">
 <setting id="org.eclipse.jdt.core.formatter.comment.insert_new_line_before_root_tags" value="insert"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_space_after_comma_in_annotation" value="insert"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_space_before_comma_in_type_parameters" value="do not insert"/>
