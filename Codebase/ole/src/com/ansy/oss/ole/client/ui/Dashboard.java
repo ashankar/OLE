@@ -3,6 +3,8 @@
  */
 package com.ansy.oss.ole.client.ui;
 
+import com.ansy.oss.ole.client.ui.createexam.CreateQuestion;
+import com.ansy.oss.ole.client.ui.takeexam.QuizStart;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Widget;
 import com.sencha.gxt.widget.core.client.TabPanel;
@@ -29,13 +31,13 @@ public class Dashboard
 		HTML shortText = new HTML("Hello Short Text");
 		shortText.addStyleName("pad-text");
 
-		tp.add(shortText, "Take Exam");
+		tp.add(new QuizStart().createUI(), "Take Exam");
 
 		tp.add(shortText, "Settings");
 
 		tp.add(shortText, "Report");
 
-		tp.add(shortText, "Create Exam");
+		tp.add(new CreateQuestion().createUI(), "Create Exam");
 
 		return tp;
 	}
