@@ -10,20 +10,24 @@ import com.sencha.gxt.widget.core.client.form.SpinnerField;
 import com.sencha.gxt.widget.core.client.form.TextArea;
 import com.sencha.gxt.widget.core.client.form.validator.MinLengthValidator;
 
-public class CreateQuestion
+public class CreateQuestion extends FramedPanel
 {
+	
+	public CreateQuestion() {
 
-	public FramedPanel createUI()
+		createUI();
+	}
+
+	private void createUI()
 	{
 
-		FramedPanel panel = new FramedPanel();
 
-		panel.setHeadingText("Administrator Form");
+		setHeadingText("Administrator Form");
 
-		panel.setWidth(1000);
+		setWidth(1000);
 
 		VerticalLayoutContainer vlc = new VerticalLayoutContainer();
-		panel.add(vlc);
+		add(vlc);
 
 		HorizontalPanel hp1 = new HorizontalPanel();
 		vlc.add(hp1);
@@ -106,7 +110,6 @@ public class CreateQuestion
 
 		vlc.setPixelSize(500, 550);
 
-		return panel;
 
 	}
 
