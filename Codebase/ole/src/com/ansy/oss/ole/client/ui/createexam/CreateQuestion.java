@@ -6,6 +6,7 @@ import com.sencha.gxt.widget.core.client.button.TextButton;
 import com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer;
 import com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData;
 import com.sencha.gxt.widget.core.client.form.FieldLabel;
+import com.sencha.gxt.widget.core.client.form.SpinnerField;
 import com.sencha.gxt.widget.core.client.form.TextArea;
 import com.sencha.gxt.widget.core.client.form.validator.MinLengthValidator;
 
@@ -24,25 +25,34 @@ public class CreateQuestion
 		VerticalLayoutContainer vlc = new VerticalLayoutContainer();
 		panel.add(vlc);
 
-		HorizontalPanel hp = new HorizontalPanel();
-		vlc.add(hp);
-
-		TextArea tr = new TextArea();
-		tr.setAllowBlank(false);
-		tr.addValidator(new MinLengthValidator(10));
-		vlc.add(new FieldLabel(tr, "Question"), new VerticalLayoutData(1, 200));
-
 		HorizontalPanel hp1 = new HorizontalPanel();
 		vlc.add(hp1);
 
-		FieldLabel l2 = new FieldLabel();
-		l2.setText("Option = 1 ");
-		hp1.setSpacing(10);
-		hp1.add(l2);
+		TextArea tr = new TextArea();
+		tr.setAllowBlank(false);
+		tr.addValidator(new MinLengthValidator(100));
+		vlc.add(new FieldLabel(tr, "Question"), new VerticalLayoutData(100, 200));
 
-		TextArea option1 = new TextArea();
-		hp1.setSpacing(10);
-		hp1.add(option1);
+		HorizontalPanel hp = new HorizontalPanel();
+		vlc.add(hp);
+		
+		//HorizontalPanel hp1 = new HorizontalPanel();
+		//vlc.add(hp1);
+
+		//FieldLabel l2 = new FieldLabel();
+		//l2.setText("Option = 1 ");
+		//hp1.setSpacing(10);
+		//hp1.add(l2);
+
+		//TextArea option1 = new TextArea();
+		//hp1.setSpacing(10);
+		
+		//hp1.add(option1);
+		
+		TextArea tr1 = new TextArea();
+		tr1.setAllowBlank(false);
+		tr1.addValidator(new MinLengthValidator(10));
+		vlc.add(new FieldLabel(tr1, "Option 1 "), new VerticalLayoutData(20, 100));
 
 		HorizontalPanel hp2 = new HorizontalPanel();
 		vlc.add(hp2);
