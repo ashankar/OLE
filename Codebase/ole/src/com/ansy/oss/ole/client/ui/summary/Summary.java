@@ -1,14 +1,15 @@
-package com.ansy.oss.ole.client.ui.createexam;
+package com.ansy.oss.ole.client.ui.summary;
 
 import com.sencha.gxt.widget.core.client.Portlet;
+import com.sencha.gxt.widget.core.client.button.TextButton;
 import com.sencha.gxt.widget.core.client.button.ToolButton;
 import com.sencha.gxt.widget.core.client.container.PortalLayoutContainer;
 import com.sencha.gxt.widget.core.client.event.SelectEvent;
 import com.sencha.gxt.widget.core.client.event.SelectEvent.SelectHandler;
 
-public class CreateExam extends PortalLayoutContainer {
+public class Summary extends PortalLayoutContainer {
 
-	public CreateExam() {
+	public Summary() {
 
 		super(1);
 		initUI();
@@ -18,9 +19,9 @@ public class CreateExam extends PortalLayoutContainer {
 
 		setColumnWidth(0, 1);
 		Portlet portlet = new Portlet();
-		portlet.setHeadingText("CreateExam");
+		portlet.setHeadingText("Summary");
 		configPanel(portlet);
-		portlet.add(new CreateQuestion());
+		portlet.add(new TextButton("Add here class"));
 		add(portlet, 0);
 
 	}

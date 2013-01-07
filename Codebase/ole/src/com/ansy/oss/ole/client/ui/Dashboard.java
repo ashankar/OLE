@@ -3,8 +3,11 @@
  */
 package com.ansy.oss.ole.client.ui;
 
-import com.ansy.oss.ole.client.ui.createexam.CreateQuestion;
-import com.ansy.oss.ole.client.ui.takeexam.QuizStart;
+import com.ansy.oss.ole.client.ui.createexam.CreateExam;
+import com.ansy.oss.ole.client.ui.report.Report;
+import com.ansy.oss.ole.client.ui.settings.Settings;
+import com.ansy.oss.ole.client.ui.summary.Summary;
+import com.ansy.oss.ole.client.ui.takeexam.TakeExam;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Widget;
 import com.sencha.gxt.widget.core.client.TabPanel;
@@ -14,30 +17,34 @@ import com.sencha.gxt.widget.core.client.TabPanel;
  * 
  *         Description about Dashboard : <br/>
  */
-public class Dashboard
-{
+public class Dashboard {
 
 	private TabPanel tp;
 
-	private void initUI()
-	{
+	private void initUI() {
 		tp = new TabPanel();
 
 	}
 
-	public Widget createUI()
-	{
+	public Widget createUI() {
 		initUI();
 		HTML shortText = new HTML("Hello Short Text");
 		shortText.addStyleName("pad-text");
 
-		tp.add(new QuizStart().createUI(), "Take Exam");
+		tp.setTabIndex(0);
+		tp.add(new Summary(), "Summary");
 
-		tp.add(shortText, "Settings");
+		tp.setTabIndex(1);
+		tp.add(new TakeExam(), "Take Exam");
 
-		tp.add(shortText, "Report");
+		tp.setTabIndex(2);
+		tp.add(new CreateExam(), "Create Exam");
 
-		tp.add(new CreateQuestion().createUI(), "Create Exam");
+		tp.setTabIndex(3);
+		tp.add(new Report(), "Report");
+
+		tp.setTabIndex(4);
+		tp.add(new Settings(), "Settings");
 
 		return tp;
 	}

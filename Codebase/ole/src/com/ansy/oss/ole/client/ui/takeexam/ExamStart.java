@@ -10,19 +10,20 @@ import com.sencha.gxt.widget.core.client.form.Radio;
 import com.sencha.gxt.widget.core.client.form.TextArea;
 import com.sencha.gxt.widget.core.client.form.validator.MinLengthValidator;
 
-public class QuizStart
-{
+public class ExamStart extends FramedPanel {
 
-	public FramedPanel createUI()
-	{
+	public ExamStart() {
 
-		FramedPanel panel = new FramedPanel();
+		createUI();
+	}
 
-		panel.setHeadingText("Student Form");
-		panel.setWidth(1100);
+	private void createUI() {
+
+		setHeadingText("Student Form");
+		setWidth(1100);
 
 		VerticalLayoutContainer vlc = new VerticalLayoutContainer();
-		panel.add(vlc);
+		add(vlc);
 
 		TextArea tr = new TextArea();
 		tr.setAllowBlank(false);
@@ -72,7 +73,6 @@ public class QuizStart
 		hp1.add(button3);
 
 		vlc.setPixelSize(550, 400);
-		return panel;
 
 	}
 
